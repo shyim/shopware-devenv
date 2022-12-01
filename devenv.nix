@@ -32,7 +32,7 @@ in
   caddy.enable = true;
   caddy.virtualHosts."http://localhost:8000" = {
     extraConfig = ''
-      root * /workspace/empty/public
+      root * public
       php_fastcgi unix/${config.languages.php.fpm.pools.web.socket}
       encode gzip
       file_server
